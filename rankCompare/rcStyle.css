@@ -3,3 +3,11 @@ h1 {
   margin-left: 20px;
   text-align: center;
 }
+
+.rcBox {
+  width: 80%;
+  height: auto;
+  border: 5px solid black;
+  padding: 10px;
+  margin: 10px;
+}
