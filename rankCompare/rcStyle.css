@@ -4,10 +4,34 @@ h1 {
   text-align: center;
 }
 
-.rcBox {
-  width: 80%;
-  height: auto;
-  border: 5px solid black;
-  padding: 10px;
-  margin: auto;
+.container {
+  display: flex;
+  /*border: 2px solid black; */
+}
+
+.teamBoxL, .teamBoxR, .middleBox {
+  margin: 15px;
+  padding: 40px;
+  text-align: center;
+}
+
+.teamBoxL {
+  flex: 2;
+  border: 5px solid #0c8c74;
+  background-color: #b9f9ed;
+}
+
+.teamBoxR {
+  flex: 2;
+  border: 5px solid #bd3944;
+  background-color: #edc4c8;
+}
+
+.middleBox {
+  flex: 1;
+  border: 5px solid #f0c929;
+}
+
+.select-group {
+  margin-bottom: 10px;
 }
