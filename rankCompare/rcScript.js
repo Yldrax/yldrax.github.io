@@ -30,17 +30,22 @@ function createSelects() {
         select.dataset.index = index; // Store the array index as a data attribute
         select.onchange = handleSelectionChange;
 
+        /*
         // Create the default "Select an option" choice
         const defaultOption = document.createElement("option");
         defaultOption.value = 0;
         defaultOption.textContent = `Player ${index+1} Rank`;
         select.appendChild(defaultOption);
+        */
 
         // Add options to the select element
         ranks.forEach((option, optIndex) => {
             const optionElement = document.createElement("option");
             optionElement.value = optIndex;
             optionElement.textContent = option;
+            if (option === "Platinum 1") {
+                optionElement.selected = true; // Set Platinum 1 as the default selected option
+            }
             select.appendChild(optionElement);
         });
 
@@ -52,7 +57,7 @@ function createSelects() {
         container.appendChild(div);
 
         // Initialize the selectedValues array
-        selectedValues[index] = 0; // Default empty value
+        selectedValues[index] = 12; // Default value for default option Platinum 1
     });
 }
 
@@ -70,6 +75,6 @@ document.addEventListener("DOMContentLoaded", createSelects);
 // Calculate the output
 
 function displayVariable() {
-    const displayArea = document.getElementById("outputArea");
-    displayArea.textContent = "Average Rank = ".concat(selectedValues); // Set the text of the display area
+    const displayArea = document.getElementById("outputAreaL");
+    displayArea.textContent = "Average Rank = ".concat(avgRank(selectedValues)); // Set the text of the display area
 }
