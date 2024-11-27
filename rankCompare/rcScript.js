@@ -100,19 +100,23 @@ function createSelectsR() {
 function handleSelectionChangeL(event) {
     const index = event.target.dataset.index; // Get the array index from the data attribute
     selectedValuesL[index] = event.target.value; // Update the corresponding value in the selectedValues array
-    console.log("Selected Values:", selectedValues); // Log the updated array
+    displayVariables();                             // Update the Display
+    console.log("Selected Values:", selectedValuesL); // Log the updated array
 }
 
 // Function to handle selection changes for the right side
 function handleSelectionChangeR(event) {
     const index = event.target.dataset.index; // Get the array index from the data attribute
     selectedValuesR[index] = event.target.value; // Update the corresponding value in the selectedValues array
-    console.log("Selected Values:", selectedValues); // Log the updated array
+    displayVariables();                             // Update the Display
+    console.log("Selected Values:", selectedValuesR); // Log the updated array
 }
 
 // Run the createSelects function after the DOM is loaded
 document.addEventListener("DOMContentLoaded", createSelectsL);
 document.addEventListener("DOMContentLoaded", createSelectsR);
+// Calculate one first time
+document.addEventListener("DOMContentLoaded", displayVariables);
 
 
 // Calculate the output

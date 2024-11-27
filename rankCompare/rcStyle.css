@@ -1,5 +1,10 @@
+@font-face {
+  font-family: "valoFont";
+  src: url(ValoFont.ttf) format("truetype");
+}
+
 body {
-  background-color: silver;
+  background-color: #ff4655; 
   min-height: 100vh;
   margin: 0;
   display: grid;
@@ -7,19 +12,20 @@ body {
 }
 
 header {
-  background-color: #f0c929;
+  background-color: #111111;
+  color: #ff4655;   
   padding: 10px;
   text-align: center;
+  font-family: valoFont;
+  font-size: 3em;
 }
 
 footer {
-
-}
-
-h1 {
-  color: steelblue;
-  margin-left: 20px;
-  text-align: center;
+  background-color: #111111;
+  margin: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  color: #ff4655; 
 }
 
 .containerBox {
@@ -37,37 +43,41 @@ h1 {
   flex: 2;
   border: 5px solid #0c8c74;
   background-color: #b9f9ed;
+  font-family: valoFont;
+
 }
 
 .teamBoxR {
   flex: 2;
   border: 5px solid #bd3944;
   background-color: #edc4c8;
+  font-family: valoFont;
+
 }
 
-.middleBox {
+.spaceBox {
   flex: 1;
-  border: 5px solid #f0c929;
-  background-color: #faedb7;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.select-group {
-  margin-bottom: 10px;
+.footLink {
+  text-decoration: none;
+  cursor: pointer;
+  color: #f7f7f7;
 }
 
-.calcButton {
-  background-color: #f0c929; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 2em;
-  cursor: pointer;
+#vsText {
+  font-family: valoFont;
+  font-size: 5em;
+  font-weight: bold;
+  color: #111111;
+  /* transform: rotate(-20deg); */
+}
+
+.select-group {
+  margin-bottom: 10px;
 }
 
 #outputAreaL, #outputAreaR {
