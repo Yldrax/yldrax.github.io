@@ -29,7 +29,8 @@ footer {
 }
 
 .containerBox {
-  display: flex;  
+  display: flex;
+  flex-direction: row;  
   /*border: 2px solid black; */
 }
 
@@ -53,6 +54,12 @@ footer {
   background-color: #edc4c8;
   font-family: valoFont;
 
+}
+
+@media screen and (max-width: 800px) {
+  .containerBox {
+    flex-direction: column;
+  }
 }
 
 .spaceBox {
