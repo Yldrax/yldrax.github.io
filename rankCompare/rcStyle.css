@@ -56,7 +56,8 @@ footer {
 
 }
 
-@media screen and (max-width: 800px) {
+@media only screen and (max-width: 800px),
+       only screen and (hover: none) and (pointer: coarse){
   .containerBox {
     flex-direction: column;
   }
